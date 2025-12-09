@@ -41,4 +41,4 @@ http://localhost:5173
 
 
 ```bash
-git clone https://github.com/MyBalls.git
+git clone https://github.com/Frytta/GameSearch
