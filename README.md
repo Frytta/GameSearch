@@ -2,7 +2,7 @@
 
 ## Opis Projektu
 
-Aplikacja umożliwia wyszukiwanie gier, sortowanie po ocenie, przeglądanie szczegółowych informacji o wybranych tytułach, sprawdzanie DLC oraz dodawanie gier do ulubionyche. Projekt jest oparty o React + React Router.
+Aplikacja umożliwia wyszukiwanie gier oraz przeglądanie szczegółowych informacji o wybranych tytułach, sprawdzanie DLC oraz dodawanie gier do ulubionych. Projekt jest oparty o React + React Router.
 
 ## Funkcjonalności
 
