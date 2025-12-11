@@ -37,7 +37,13 @@ https://rawg.io/apidocs
 npm run dev
 
 Aplikacja uruchomi się pod:
+
 http://localhost:5173
+
+<img width="1920" height="917" alt="sc1" src="https://github.com/user-attachments/assets/1b4618a6-240c-45ba-b49f-4f39da1b4cca" />
+<img width="1920" height="912" alt="sc2" src="https://github.com/user-attachments/assets/1144f98e-a6b1-4769-a432-35c5a8338203" />
+<img width="1920" height="914" alt="sc3" src="https://github.com/user-attachments/assets/21828c7a-780c-4f86-812a-961f4fa602eb" />
+<img width="1920" height="918" alt="sc4" src="https://github.com/user-attachments/assets/2876e698-2c37-4e40-b513-ee0fcc69d2a6" />
 
 
 ```bash
