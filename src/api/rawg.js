@@ -28,3 +28,9 @@ export async function getDLC(id) {
     if (!res.ok) throw new Error("Błąd API");
     return res.json();
 }
+export async function getScreenshots(id) {
+    const res = await fetch(
+        `https://api.rawg.io/api/games/${id}/screenshots?key=${import.meta.env.VITE_RAWG_KEY}`
+    );
+    return res.json();
+}

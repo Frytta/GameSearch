@@ -12,6 +12,21 @@ export default function Home() {
     const [error, setError] = useState("");
     const [page, setPage] = useState(1);
     const [query, setQuery] = useState("");
+    const [heroBg, setHeroBg] = useState(null);
+
+    useEffect(() => {
+        let mounted = true;
+        async function loadCover() {
+            try {
+                const data = await searchGames("dark souls: remastered", 1);
+                if (!mounted) return;
+                setHeroBg(data?.results?.[0]?.background_image || null);
+            } catch (e) {
+            }
+        }
+        loadCover();
+        return () => (mounted = false);
+    }, []);
 
     useEffect(() => {
         if (query.length > 1) handleSearch(query, page);
@@ -30,19 +45,19 @@ export default function Home() {
                 const nameA = a.name.toLowerCase();
                 const nameB = b.name.toLowerCase();
 
-                // EXACT MATCH — pełne dopasowanie
+                //EXACT MATCH 
                 const exactA = nameA === queryLower;
                 const exactB = nameB === queryLower;
                 if (exactA && !exactB) return -1;
                 if (exactB && !exactA) return 1;
 
-                // STARTS WITH — zaczyna się od frazy
+                //STARTS WITH 
                 const startsA = nameA.startsWith(queryLower);
                 const startsB = nameB.startsWith(queryLower);
                 if (startsA && !startsB) return -1;
                 if (startsB && !startsA) return 1;
 
-                // ALL WORDS MATCH — ile słów z query występuje w nazwie
+                //ALL WORDS MATCH 
                 const words = queryLower.split(" ");
                 const scoreA = words.filter(w => nameA.includes(w)).length;
                 const scoreB = words.filter(w => nameB.includes(w)).length;
@@ -61,8 +76,17 @@ export default function Home() {
 
     return (
         <div className="page-container">
+            <div
+                className="home-bg"
+                style={{ backgroundImage: heroBg ? `url(${heroBg})` : undefined }}
+            />
 
-            <SearchBar onSearch={(q) => { setPage(1); handleSearch(q, 1); }} />
+            <div className="home-hero">
+                <div className="hero-inner">
+                    <SearchBar onSearch={(q) => { setPage(1); handleSearch(q, 1); }} />
+                </div>
+            </div>
+
             {loading && <Loader />}
             {error && <ErrorMessage message={error} />}
             <div className="games-grid">
