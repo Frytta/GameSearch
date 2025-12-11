@@ -1,9 +1,10 @@
-= Użyte biblioteki
+# Użyte Biblioteki
 
-Biblioteka	            Powód użycia
-
-React	                odstawa aplikacji, komponenty, hooki
-React Router DOM	    Routing między stronami
-RAWG API	            Źródło danych o grach
-Context API	            Globalne zarządzanie stanem ulubionych
-LocalStorage	        Trwałe przechowywanie ulubionych po odświeżeniu
+- React (^19.2.0)
+- React DOM (^19.2.0)
+- React Router DOM (^7.10.1)
+- Vite (^7.2.4)
+- ESLint (^9.39.1)
+- RAWG API 
+- Context API 
+- LocalStorage 
