@@ -1,10 +1,9 @@
-const API = "https://api.rawg.io/api";
+const API = import.meta.env.VITE_BACKEND_URL;
 
 export async function searchGames(query, page = 1) {
-    const key = import.meta.env.VITE_RAWG_KEY;
-
     const res = await fetch(
-        `${API}/games?search=${query}&key=${key}&page=${page}&page_size=20`
+        `${API}/search`,
+        { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ query, page: page.toString() }) }
     );
 
     if (!res.ok) throw new Error("Błąd API");
@@ -14,23 +13,21 @@ export async function searchGames(query, page = 1) {
 }
 
 export async function getGame(id) {
-    const key = import.meta.env.VITE_RAWG_KEY;
-    const res = await fetch(`${API}/games/${id}?key=${key}`);
+    const res = await fetch(`${API}/game/${id}`);
 
     if (!res.ok) throw new Error("Błąd API");
     return res.json();
 }
 
 export async function getDLC(id) {
-    const key = import.meta.env.VITE_RAWG_KEY;
-    const res = await fetch(`${API}/games/${id}/additions?key=${key}`);
+    const res = await fetch(`${API}/game/${id}/dlc`);
 
     if (!res.ok) throw new Error("Błąd API");
     return res.json();
 }
 export async function getScreenshots(id) {
     const res = await fetch(
-        `https://api.rawg.io/api/games/${id}/screenshots?key=${import.meta.env.VITE_RAWG_KEY}`
+        `${API}/game/${id}/screenshots`
     );
     return res.json();
 }
