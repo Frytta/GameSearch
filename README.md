@@ -14,30 +14,32 @@ Aplikacja umożliwia wyszukiwanie gier oraz przeglądanie szczegółowych inform
 - Responsywność (mobile-first)  
 - Obsługa błędów i stanów ładowania  
 - Oddzielne podstrony: Home, Game Details, Favorites, Not Found  
-- Nowoczesny ciemny motyw UI  
+- Ciemny motyw UI  
 
 ## Instalacja i uruchomienie
-1. Sklonuj repozytorium
+###1. Sklonuj repozytorium
 
-2. Wejdź do folderu projektu:
+```bash
+git clone https://github.com/Frytta/GameSearch
+```
+###2. Zainstaluj zależności (Bun):
+bun install
+
+###3. Wejdź do folderu projektu:
 cd game-search-app
 
-3. Zainstaluj zależności:
-npm install
-
-4. Dodaj klucz API RAWG:
+###4. Dodaj klucz API RAWG:
 Stwórz plik .env:
-
+```bash
 VITE_RAWG_KEY=TWÓJ_KLUCZ_API
-
-Klucz pobierzesz z:
+```
+Klucz wygeneruj z:
 https://rawg.io/apidocs
 
-5. Uruchom projekt:
-npm run dev
+###5. Uruchom projekt:
+bun dev
 
 Aplikacja uruchomi się pod:
-
 http://localhost:5173
 
 <img width="1920" height="917" alt="sc1" src="https://github.com/user-attachments/assets/1b4618a6-240c-45ba-b49f-4f39da1b4cca" />
@@ -46,5 +48,4 @@ http://localhost:5173
 <img width="1920" height="918" alt="sc4" src="https://github.com/user-attachments/assets/2876e698-2c37-4e40-b513-ee0fcc69d2a6" />
 
 
-```bash
-git clone https://github.com/Frytta/GameSearch
+
