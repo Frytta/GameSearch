@@ -17,18 +17,18 @@ Aplikacja umożliwia wyszukiwanie gier oraz przeglądanie szczegółowych inform
 - Ciemny motyw UI  
 
 ## Instalacja i uruchomienie
-###1. Sklonuj repozytorium
+1. Sklonuj repozytorium
 
 ```bash
 git clone https://github.com/Frytta/GameSearch
 ```
-###2. Zainstaluj zależności (Bun):
+2. Zainstaluj zależności (Bun):
 bun install
 
-###3. Wejdź do folderu projektu:
+3. Wejdź do folderu projektu:
 cd game-search-app
 
-###4. Dodaj klucz API RAWG:
+4. Dodaj klucz API RAWG:
 Stwórz plik .env:
 ```bash
 VITE_RAWG_KEY=TWÓJ_KLUCZ_API
@@ -36,7 +36,7 @@ VITE_RAWG_KEY=TWÓJ_KLUCZ_API
 Klucz wygeneruj z:
 https://rawg.io/apidocs
 
-###5. Uruchom projekt:
+5. Uruchom projekt:
 bun dev
 
 Aplikacja uruchomi się pod:
