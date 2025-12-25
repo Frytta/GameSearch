@@ -22,13 +22,13 @@ Aplikacja umożliwia wyszukiwanie gier oraz przeglądanie szczegółowych inform
 ```
 git clone https://github.com/Frytta/GameSearch
 ```
-2. Zainstaluj zależności (Bun):
+2. Wejdź do folderu projektu:
+```
+cd GameSearch
+```
+3. Zainstaluj zależności (Bun):
 ```
 bun install
-```
-3. Wejdź do folderu projektu:
-```
-cd game-search-app
 ```
 4. Dodaj klucz API RAWG:
 
